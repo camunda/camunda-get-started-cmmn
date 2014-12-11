@@ -7,7 +7,9 @@
       name="Loan Application" id="CasePlanModel">
       <!-- Plan Items -->
       <cmmn:planItem definitionRef="HumanTask_1" id="PI_HumanTask_1" />
-      <cmmn:planItem definitionRef="HumanTask_2" id="PI_HumanTask_2" />
+      <cmmn:planItem definitionRef="HumanTask_2" id="PI_HumanTask_2">
+        <cmmn:exitCriterion sentryRef="Sentry_2" />
+      </cmmn:planItem>
       <cmmn:planItem definitionRef="Milestone_1" id="PI_Milestone_1">
         <cmmn:entryCriterion sentryRef="Sentry_1" />
       </cmmn:planItem>
@@ -22,6 +24,14 @@
         </cmmn:planItemOnPart>
         <cmmn:ifPart>
           <cmmn:condition><![CDATA[${applicationSufficient && rating > 3}]]></cmmn:condition>
+        </cmmn:ifPart>
+      </cmmn:sentry>
+      <cmmn:sentry id="Sentry_2">
+        <cmmn:planItemOnPart sourceRef="PI_HumanTask_1">
+          <cmmn:standardEvent>complete</cmmn:standardEvent>
+        </cmmn:planItemOnPart>
+        <cmmn:ifPart>
+          <cmmn:condition>${!applicationSufficient}</cmmn:condition>
         </cmmn:ifPart>
       </cmmn:sentry>
 
