@@ -1,19 +1,8 @@
-# Camunda Platform - Getting Started Developing CMMN Applications
+## This project has been retired
 
-This Repository contains the example process application for the guide at [docs.camunda.org](https://docs.camunda.org/get-started/cmmn11/).
+The `camunda-get-started-cmmn` repository has been retired. Please have a look at the other Camunda
+Getting Started guides [here](https://docs.camunda.org/get-started/). You can also check out our 
+[camunda-bpm-examples](https://github.com/camunda/camunda-bpm-examples) repository.
 
-Every step of the tutorial was tagged in this repository. You can jump to the final state of each step
-by the following command:
-
-```
-git checkout -f Step-X
-```
-
-If you want to follow the tutorial along please clone this repository and checkout the `Start` tag.
-
-```
-git clone https://github.com/camunda/camunda-get-started-cmmn.git
-git checkout -f Start
-```
-
-License: The source files in this repository are made available under the [Apache License Version 2.0](./LICENSE).
+## License
+The source files in this repository are made available under the [Apache License Version 2.0](./LICENSE).
